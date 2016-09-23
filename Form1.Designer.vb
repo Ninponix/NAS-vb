@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TextBanner1 = New NAS_vb.TextBanner()
+        Me.GraphBanner1 = New NAS_vb.GraphBanner()
         Me.SuspendLayout()
         '
         'TextBanner1
@@ -43,11 +44,22 @@ Partial Class Form1
         Me.TextBanner1.Size = New System.Drawing.Size(300, 75)
         Me.TextBanner1.TabIndex = 0
         '
+        'GraphBanner1
+        '
+        Me.GraphBanner1.BackColor = System.Drawing.Color.Transparent
+        Me.GraphBanner1.DeveloperID = 0
+        Me.GraphBanner1.Location = New System.Drawing.Point(13, 13)
+        Me.GraphBanner1.Name = "GraphBanner1"
+        Me.GraphBanner1.Size = New System.Drawing.Size(300, 75)
+        Me.GraphBanner1.TabIndex = 1
+        Me.GraphBanner1.UpdateRate = 25000
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(635, 104)
+        Me.Controls.Add(Me.GraphBanner1)
         Me.Controls.Add(Me.TextBanner1)
         Me.Name = "Form1"
         Me.Text = "Windows Form Test"
@@ -56,4 +68,5 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents TextBanner1 As TextBanner
+    Friend WithEvents GraphBanner1 As GraphBanner
 End Class
